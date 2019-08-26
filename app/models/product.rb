@@ -6,7 +6,7 @@ class Product < ActiveRecord::Base
   belongs_to :category
 
   validates :name, presence: true
-  validates :price, presence: true
+  validates :price_cents, presence: true, allow_nil: false
   validates :quantity, presence: true
   validates :category, presence: true
 
