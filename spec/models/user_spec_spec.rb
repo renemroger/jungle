@@ -32,6 +32,7 @@ RSpec.describe User, type: :model do
     it 'Password and Password_confirmation must match' do
       user.password.should eq(user.password_confirmation)
     end
+    
     it 'should validate uniqueness of email' do
       User.create(:name => 'max', :email =>'max@max.com',:password => '123123', :password_confirmation => '123123').save
       user1 = User.new(:name => 'max', :email =>'max@max.com',:password => '123123', :password_confirmation => '123123')

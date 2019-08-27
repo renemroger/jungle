@@ -17,13 +17,14 @@ RSpec.feature "Visitor navigates to home page", type: :feature, js: true do
     end
   end
 
-  scenario "They see all products" do
+  scenario "They can see an individual product" do
     # ACT
     visit '/'
 
+    
     # DEBUG
     page.save_screenshot('screen.png', full: true) # If providing a custom file name.
     # VERIFY
-    expect(page).to have_css 'article.product', count: 10
+    expect(page).to have_css 'article.product'
   end
 end
