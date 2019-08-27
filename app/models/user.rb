@@ -1,7 +1,6 @@
 class User < ActiveRecord::Base
   has_secure_password
 
-
   auto_strip_attributes :name, squish: true
   auto_strip_attributes :email, squish: true
 
