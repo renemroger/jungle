@@ -21,9 +21,7 @@ RSpec.feature "ProductDetails", type: :feature, js: true do
       visit '/'
 
       first('.product').click_on('Details')
-      
 
-      sleep 2
       # DEBUG
       page.save_screenshot('screen.png', full: true) # If providing a custom file name.
       # VERIFY
